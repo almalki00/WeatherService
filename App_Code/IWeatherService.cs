@@ -10,7 +10,7 @@ using System.Text;
 public interface IWeatherService
 {
     [OperationContract]
-    WeatherReports getWeatherData(string city_name, string state_name, int UserName);
+    WeatherReports getWeatherDetails(string city_name, string state_name, int UserName);
     [OperationContract]
     LatLong GetLatLong(string StateOrCity);
 }

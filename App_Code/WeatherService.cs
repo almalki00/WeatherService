@@ -12,7 +12,7 @@ using System.ServiceModel.Activation;
 [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]// NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "WeatherService" in code, svc and config file together.
 public class WeatherService : IWeatherService
 {
-    public WeatherReports getWeatherData(string city_name, string state_name, int UserName)
+    public WeatherReports getWeatherDetails(string city_name, string state_name, int UserName)
     {
         string key = "4b47e918045b2342";
         string output;
