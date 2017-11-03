@@ -28,4 +28,16 @@ public class WeatherService : IWeatherService
             return wp;
         }
     }
+    public LatLong GetLatLong(string StateOrCity)
+    {
+        string output;
+        LatLong lst = new LatLong();
+        using (WebClient client = new WebClient())
+        {
+            string input = "http://autocomplete.wunderground.com/aq?query=" + StateOrCity;
+            output = client.DownloadString(input);
+            lst = JsonConvert.DeserializeObject<LatLong>(output);
+            return lst;
+        }
+    }
 }
